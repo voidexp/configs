@@ -1,0 +1,4 @@
+theme = "solarized_dark"
+
+[keys.normal]
+C-q = ":reflow"
