@@ -1,0 +1,13 @@
+!game/mods
+*.uid
+*.import
+*.material
+*.glb
+*.png
+*.svg
+*.dll
+*.exe
+*.bin
+data/
+bin/
+game/addons/godotsteam

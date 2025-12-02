@@ -1,0 +1,3 @@
+[[markdown]]
+soft-wrap = { enabled = true, wrap-at-text-width = true }
+text-width = 80
