@@ -1,0 +1,13 @@
+theme = "solarized_dark"
+
+[editor]
+trim-trailing-whitespace = true
+trim-final-newlines = true
+insert-final-newline = true
+
+[keys.normal]
+C-q = ":reflow"
+
+[editor.file-picker]
+git-ignore = true
+ignore = true

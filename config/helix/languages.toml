@@ -5,3 +5,7 @@ args = ["127.0.0.1", "6005"]
 [[language]]
 name = "gdscript"
 language-servers = ["godot"]
+
+[[markdown]]
+soft-wrap = { enabled = true, wrap-at-text-width = true }
+text-width = 80
