@@ -3,12 +3,12 @@
 TITLE="Arctic Chill Dev"
 WM_CLASS=ArcticChillDev
 WORK_DIR=$HOME/Projects/arctic-chill
-KITTY=$HOME/.local/bin/kitty
 WID=`xdotool search --limit 1 --name "$TITLE"`
+KITTY_SESSION=$HOME/.config/kitty/sessions/arctic-chill.kitty-session
 
 if [ -z $WID ]; then
   echo "No editor found, opening..."
-  PID=$(kitty --session=~/.config/kitty/sessions/arctic-chill.kitty-session --class=$WM_CLASS --title="$TITLE" --start-as=maximized --working-directory=$WORK_DIR &)
+  PID=$(kitty --session=$KITTY_SESSION --class=$WM_CLASS --title="$TITLE" --start-as=maximized --working-directory=$WORK_DIR &)
   echo $PID
 
   for i in {1..10}; do

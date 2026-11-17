@@ -1,14 +1,15 @@
 #!/bin/bash
 
-HELIX={{HELIX}}
 TITLE="JSA Dev"
 WM_CLASS=JSADev
 WORK_DIR=$HOME/Projects/jsa
 WID=`xdotool search --limit 1 --name "$TITLE"`
+KITTY_SESSION=$HOME/.config/kitty/sessions/jsa.kitty-session
 
 if [ -z $WID ]; then
   echo "No editor found, opening..."
-  gnome-terminal --name=$TITLE --class=$WM_CLASS --title="$TITLE" --maximize --working-directory=$WORK_DIR -- $HELIX $1 &
+  PID=$(kitty --session=$KITTY_SESSION --class=$WM_CLASS --title="$TITLE" --start-as=maximized --working-directory=$WORK_DIR &)
+  echo $PID
 
   for i in {1..10}; do
     WID=`xdotool search --limit 1 --name "$TITLE"`
@@ -22,7 +23,7 @@ fi
 xdotool windowactivate $WID
 
 if [ $1 ]; then
-  xdotool key Escape
-  xdotool type ":o $1"
+  xdotool key Control_L Shift_L F3
+  xdotool type "goto_tab 1"
   xdotool key Return
 fi
