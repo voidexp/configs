@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Arctic Chill Dev
+Exec=/home/voidexp/.local/bin/arctic-chill-dev.sh
+Comment=
+Terminal=false
+PrefersNonDefaultGPU=false
+Icon=/home/voidexp/.local/share/icons/arctic-chill-dev.png
+Type=Application
+StartupWMClass=ArcticChillDev

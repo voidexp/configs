@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=JSA Dev
+Exec=/home/voidexp/.local/bin/jsa-dev.sh
+Comment=
+Terminal=false
+PrefersNonDefaultGPU=false
+Icon=/home/voidexp/.local/share/icons/jsa-dev.png
+Type=Application
+StartupWMClass=JSADev
