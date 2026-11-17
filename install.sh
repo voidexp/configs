@@ -59,8 +59,11 @@ for dir in $(ls); do
 done
 
 # -- Postprocessing --
-echo "Patching configs..."
-cd $HOME/.config/kitty/sessions
-for file in $(ls *.kitty-session); do
+echo "Patching files..."
+files=(
+  $HOME/.config/kitty/sessions/arctic-chill.kitty-session
+  $HOME/.local/bin/jsa-dev.sh
+)
+for file in "${files[@]}"; do
   replace_vars $file
 done
