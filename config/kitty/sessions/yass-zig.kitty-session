@@ -1,0 +1,15 @@
+enabled_layouts horizontal
+layout horizontal
+
+# Project working directory
+cd /home/voidexp/Projects/yass-zig
+
+# Helix editor on the left side
+launch --title Editor {{HELIX}}
+
+# Shell on the right side
+cd /home/voidexp/Projects/yass-zig
+launch --title Shell --cwd=current --bias -20
+
+focus_tab 0
+set_tab_title YASS zig

@@ -75,6 +75,7 @@ echo "Patching files..."
 files=(
   $HOME/.config/kitty/sessions/arctic-chill.kitty-session
   $HOME/.config/kitty/sessions/jsa.kitty-session
+  $HOME/.config/kitty/sessions/yass-zig.kitty-session
   $HOME/.local/share/applications/jsa.desktop
   $HOME/.local/share/applications/arctic-chill.desktop
 )
