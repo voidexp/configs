@@ -75,6 +75,8 @@ echo "Patching files..."
 files=(
   $HOME/.config/kitty/sessions/arctic-chill.kitty-session
   $HOME/.config/kitty/sessions/jsa.kitty-session
+  $HOME/.local/share/applications/jsa.desktop
+  $HOME/.local/share/applications/arctic-chill.desktop
 )
 for file in "${files[@]}"; do
   replace_vars $file
