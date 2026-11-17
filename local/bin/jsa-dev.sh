@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HELIX={{HELIX}}
-TITLE="JSA"
+TITLE="JSA Dev"
 WM_CLASS=JSADev
 WORK_DIR=$HOME/Projects/jsa
 WID=`xdotool search --limit 1 --name "$TITLE"`
