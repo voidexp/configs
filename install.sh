@@ -2,20 +2,32 @@
 
 root=$(pwd)
 
+# -- Check for programs --
+
+# Python
 python=$(which python3)
 if [ -z $python ]; then
-  echo "ERROR: 'python3' not found, aborting"
+  echo "ERROR: 'python3' executable not found, aborting"
   exit 1
 fi
 
+# Helix
 helix=$(which hx)
 if [ -z $helix ]; then
-  echo "ERROR: Helix executable 'hx' not found, aborting"
+  echo "ERROR: 'hx executable not found, aborting"
   exit 1
 fi
+export HELIX=$helix
 
+# Kitty (warn only)
+if [ -z $(which kitty) ]; then
+  echo "WARNING: 'kitty' executable not found"
+fi
+
+# Replaces the {{NAME}} occurrences in the given file with the value of the
+# export-ed NAME environment variable.
 function replace_vars() {
-  env HELIX=$helix $python - $1 <<EOF
+  $python - $1 <<EOF
 from sys import argv
 from os import environ as env
 filename = argv[1]
