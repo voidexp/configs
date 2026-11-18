@@ -1,4 +1,3 @@
-!game/mods
 *.uid
 *.import
 *.material
@@ -8,6 +7,12 @@
 *.dll
 *.exe
 *.bin
-data/
+*.wav
+*.ogg
+*.otf
+*.ttf
+*.jpg
+*.mp3
 bin/
-game/addons/godotsteam
+build/
+addons/

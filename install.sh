@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 root=$(pwd)
+projects_root=$HOME/Projects
 
 # -- Check for programs --
 
@@ -68,6 +69,21 @@ for dir in $(ls); do
   for file in $(find $dir -type f); do
     install -D -m 664 $file $HOME/.config/$file
   done
+done
+
+# -- Projects --
+echo "Installing project configs..."
+cd $root/Projects
+for proj_dir in $(ls); do
+  if [ -d $projects_root/$proj_dir ]; then
+    for cfg_dir in $(ls $proj_dir); do
+      dst_dir=$(echo $cfg_dir | sed 's/^_/./g')
+      if [ -d $projects_root/$proj_dir/$dst_dir ]; then
+        rm -r $projects_root/$proj_dir/$dst_dir
+      fi
+      cp -rv $proj_dir/$cfg_dir $projects_root/$proj_dir/$dst_dir
+    done
+  fi
 done
 
 # -- Postprocessing --

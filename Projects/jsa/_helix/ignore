@@ -1,0 +1,15 @@
+!game/mods
+*.uid
+*.import
+*.material
+*.glb
+*.png
+*.svg
+*.dll
+*.exe
+*.bin
+data/
+bin/
+game/addons/gut
+game/addons/godotsteam
+game/addons/awesome_input_icons
