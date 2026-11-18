@@ -12,4 +12,3 @@ cd /home/voidexp/Projects/yass-zig
 launch --title Shell --cwd=current --bias -20
 
 focus_tab 0
-set_tab_title YASS zig
