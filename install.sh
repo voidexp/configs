@@ -81,7 +81,7 @@ for proj_dir in $(ls); do
       if [ -d $projects_root/$proj_dir/$dst_dir ]; then
         rm -r $projects_root/$proj_dir/$dst_dir
       fi
-      cp -rv $proj_dir/$cfg_dir $projects_root/$proj_dir/$dst_dir
+      cp -r $proj_dir/$cfg_dir $projects_root/$proj_dir/$dst_dir
     done
   fi
 done
